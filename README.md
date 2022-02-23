@@ -1,4 +1,4 @@
-# repo-finder
+# gcr-finder
 Find Google GCR Repo's 
 
 Use a VPS from DO
