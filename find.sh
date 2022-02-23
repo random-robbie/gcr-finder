@@ -2,7 +2,7 @@
 #
 
 check_target () {
-	if $(curl -i -s -k --proxy http://127.0.0.1:8085 -X 'POST' -H 'Content-Type: application/json' --data-binary "['$1',null,null,[11]]" https://console.cloud.google.com/m/gcr/entities/list | grep -qi "gcr.ListEntities"); then
+	if $(curl -i -s -k -X 'POST' -H 'Content-Type: application/json' --data-binary "['$1',null,null,[11]]" https://console.cloud.google.com/m/gcr/entities/list | grep -qi "gcr.ListEntities"); then
 		echo "https://gcr.io/$1"
 	fi
 }
